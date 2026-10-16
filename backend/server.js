@@ -35,12 +35,19 @@ app.use(express.json());
 app.use(cookieParser());
 connectDB()
 
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "hhttps://job-portal-z8pz.vercel.app",
+];
+
 app.use(
   cors({
-    origin: "https://job-portal-z8pz.vercel.app/",
-     credentials: true,
+    origin: allowedOrigins,
+    credentials: true,
   })
 );
+
 
 app.use(express.json());
 
