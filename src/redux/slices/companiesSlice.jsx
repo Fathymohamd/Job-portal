@@ -7,7 +7,7 @@ export const getCompanies = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        "http://localhost:8080/api/companies"
+        "https://job-portal-three-chi.vercel.app/api/companies"
       );
 
       const data = await response.json();

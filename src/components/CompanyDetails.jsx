@@ -21,7 +21,7 @@ function CompanyDetails() {
     const getCompany = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/companies/${id}`
+          `https://job-portal-three-chi.vercel.app/api/companies/${id}`
         );
 
         if (!response.ok) {

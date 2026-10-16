@@ -5,7 +5,7 @@ export const getCurrentUser = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        "http://localhost:8080/me",
+        "https://job-portal-three-chi.vercel.app/me",
         {
           method: "GET",
           credentials: "include",

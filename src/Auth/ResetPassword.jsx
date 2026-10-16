@@ -22,7 +22,7 @@ const ResetPassword = () => {
 
     try {
       const res = await fetch(
-        "http://localhost:8080/api/auth/ResetPassword",
+        "https://job-portal-three-chi.vercel.app/api/auth/ResetPassword",
         {
           method: "POST",
           headers: {

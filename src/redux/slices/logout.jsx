@@ -6,7 +6,7 @@ export const res = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        "http://localhost:8080/logout",
+        "https://job-portal-three-chi.vercel.app/logout",
         {
           method: "POST",
           credentials: "include",

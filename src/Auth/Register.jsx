@@ -69,7 +69,7 @@ return;
 
 try {
 const response = await fetch(
-"http://localhost:8080/api/auth/register",
+"https://job-portal-three-chi.vercel.app/api/auth/register",
 {
 method: "POST",
 headers: {

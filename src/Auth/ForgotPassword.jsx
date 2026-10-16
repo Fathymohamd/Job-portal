@@ -14,7 +14,7 @@ if(!email.trim()){
 }
   try {
     const res = await fetch(
-      "http://localhost:8080/api/auth/ForgotPassword",
+      "hhttps://job-portal-three-chi.vercel.app/api/auth/ForgotPassword",
       {
         method: "POST",
         headers: {
