@@ -1,0 +1,139 @@
+```css
+.company-details-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.company-details-back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.company-details-card {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.company-details-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.company-details-logo {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.company-details-header h1 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 30px;
+}
+
+.company-details-industry {
+  margin: 0;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.company-details-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.company-details-item {
+  padding: 18px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+.company-details-item span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.company-details-item p {
+  margin: 8px 0 0;
+  color: #111827;
+  font-weight: 600;
+}
+
+.company-details-description h2 {
+  margin-bottom: 12px;
+  color: #111827;
+  font-size: 22px;
+}
+
+.company-details-description p {
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+.company-details-jobs-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.company-details-jobs-btn:hover {
+  background: #1d4ed8;
+}
+
+.company-details-loading,
+.company-details-error {
+  margin: 60px auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.company-details-error {
+  color: #dc2626;
+}
+
+@media (max-width: 600px) {
+  .company-details-page {
+    margin: 20px auto;
+    padding: 12px;
+  }
+
+  .company-details-card {
+    padding: 20px;
+  }
+
+  .company-details-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .company-details-header h1 {
+    font-size: 24px;
+  }
+
+  .company-details-info {
+    grid-template-columns: 1fr;
+  }
+}
+```

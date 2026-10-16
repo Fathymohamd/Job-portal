@@ -1,0 +1,289 @@
+.employer-jobs-page {
+  min-height: 100vh;
+  padding: 70px 20px;
+  background: #f8fafc;
+}
+
+.employer-jobs-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.jobs-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.jobs-page-header span {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.jobs-page-header h1 {
+  margin: 8px 0;
+  color: #111827;
+  font-size: 34px;
+}
+
+.jobs-page-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.post-job-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 20px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.post-job-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Stats */
+
+.jobs-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.jobs-stat {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 22px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.jobs-stat-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 10px;
+}
+
+.jobs-stat h3 {
+  margin: 0 0 5px;
+  color: #111827;
+  font-size: 23px;
+}
+
+.jobs-stat p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* Jobs List */
+
+.jobs-list {
+  padding: 30px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.jobs-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.jobs-list-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 21px;
+}
+
+.jobs-list-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* Job Card */
+
+.employer-job-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 22px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.job-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.job-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 10px;
+}
+
+.job-info h2 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 17px;
+}
+
+.job-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.job-details span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.posted-date {
+  margin: 9px 0 0;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+/* Actions */
+
+.job-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.job-status {
+  padding: 5px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.job-status.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.job-status.closed {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 7px;
+}
+
+.action-buttons a,
+.action-buttons button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.view-btn {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.edit-btn {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.delete-btn {
+  border: none;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.action-buttons a:hover,
+.action-buttons button:hover {
+  opacity: 0.75;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .jobs-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .employer-job-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .job-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .employer-jobs-page {
+    padding: 45px 15px;
+  }
+
+  .jobs-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .post-job-btn {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .jobs-list {
+    padding: 20px;
+  }
+
+  .job-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
