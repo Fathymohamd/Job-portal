@@ -37,7 +37,7 @@ connectDB()
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://job-portal-z8pz.vercel.app/",
      credentials: true,
   })
 );
