@@ -58,7 +58,7 @@ console.error("Logout failed:", error);
           <NavLink to="/jobs" onClick={closeMenu}>
             Find Jobs
           </NavLink>
-          <NavLink to="/companies" onClick={closeMenu}>
+          <NavLink to="/companiesArray" onClick={closeMenu}>
             Companies
           </NavLink>
           <NavLink to="/about" onClick={closeMenu}>

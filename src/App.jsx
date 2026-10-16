@@ -21,6 +21,7 @@ import ResetPassword from "./Auth/ResetPassword";
 import Home from "./pages/Home"
 import NotFound from "./components/NotFound"
 import CompanyDetails from "./components/CompanyDetails"
+import CompaniesArray from "./components/CompaniesArray"
 
 import  "./Styles/Navbar.css"
 import  "./Styles/Home.css"
@@ -78,8 +79,9 @@ function App() {
 <Route path="/ResetPassword/:token" element={<ResetPassword />} />
 <Route path="/employer/applicants" element={<Applicants />} />
 <Route path="/companies/:id" element={<CompanyDetails />} />
+<Route path="/companiesArray" element={<CompaniesArray />} />
 </Route>
-    </Routes>
+</Routes>
     </>
   )
 }

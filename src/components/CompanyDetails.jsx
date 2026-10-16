@@ -1,7 +1,14 @@
 
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-
+import {
+  FaArrowLeft,
+  FaLocationDot,
+  FaBuilding,
+  FaBriefcase,
+  FaGlobe,
+  FaCircleInfo,
+} from "react-icons/fa6";
 
 function CompanyDetails() {
   const { id } = useParams();
@@ -47,55 +54,101 @@ function CompanyDetails() {
   }
 
   return (
-    <div className="company-details-page">
-      <Link to="/companies" className="company-details-back">
-        ← Back to Companies
-      </Link>
+  
+<div className="company-details-page">
+  <Link to="/companies" className="company-details-back">
+    <FaArrowLeft />
+    Back to Companies
+  </Link>
 
-      <div className="company-details-card">
-        <div className="company-details-header">
-          <img
-            src={company.logo}
-            alt={`${company.name} logo`}
-            className="company-details-logo"
-          />
+  <div className="company-details-card">
+    <div className="company-details-header">
+      <img
+        src={company.logo}
+        alt={`${company.name} logo`}
+        className="company-details-logo"
+      />
 
-          <div>
-            <h1>{company.name}</h1>
-            <p className="company-details-industry">
-              {company.industry}
-            </p>
-          </div>
-        </div>
+      <div>
+        <h1>{company.name}</h1>
 
-        <div className="company-details-info">
-          <div className="company-details-item">
-            <span>📍 Location</span>
-            <p>{company.location || "Not specified"}</p>
-          </div>
-
-          <div className="company-details-item">
-            <span>🏢 Industry</span>
-            <p>{company.industry || "Not specified"}</p>
-          </div>
-        </div>
-
-        <div className="company-details-description">
-          <h2>About the Company</h2>
-          <p>
-            {company.description || "No company description available."}
-          </p>
-        </div>
-
-        <Link
-          to={`/jobs?company=${company._id}`}
-          className="company-details-jobs-btn"
-        >
-          View Jobs
-        </Link>
+        <p className="company-details-industry">
+          <FaBuilding />
+          {company.industry || "Not specified"}
+        </p>
       </div>
     </div>
+
+    <div className="company-details-info">
+      <div className="company-details-item">
+        <span>
+          <FaLocationDot />
+          Location
+        </span>
+        <p>{company.location || "Not specified"}</p>
+      </div>
+
+      <div className="company-details-item">
+        <span>
+          <FaBuilding />
+          Industry
+        </span>
+        <p>{company.industry || "Not specified"}</p>
+      </div>
+
+      <div className="company-details-item">
+        <span>
+          <FaBriefcase />
+          Open Positions
+        </span>
+        <p>{company.jobsCount ?? 0}</p>
+      </div>
+
+      <div className="company-details-item">
+        <span>
+          <FaGlobe />
+          Website
+        </span>
+        {company.website ? (
+          <a className="link"
+            href={company.website}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit Website
+          </a>
+        ) : (
+          <p>Not specified</p>
+        )}
+      </div>
+    </div>
+
+    <div className="company-details-description">
+      <h2>
+        <FaCircleInfo />
+        About the Company
+      </h2>
+
+      <p>
+        {company.description ||
+          "No company description available."}
+      </p>
+    </div>
+
+    <Link
+      to={`/jobs?company=${company._id}`}
+      className="company-details-jobs-btn"
+    >
+      <FaBriefcase />
+      View Jobs
+    </Link>
+  </div>
+</div>
+
   );
 }
 
 export default CompanyDetails;
+
+
+

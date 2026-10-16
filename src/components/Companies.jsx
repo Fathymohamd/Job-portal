@@ -49,14 +49,14 @@ if (loading) {
             </p>
           </div>
 
-          <Link to="/companies" className="view-all">
+          <Link to="/companiesArray" className="view-all">
             View All Companies →
           </Link>
         </div>
 
         <div className="companies-grid">
     
-{companies?.map((company) => (
+{companies?.slice(0 , 4).map((company) => (
   <Link
     to={`/companies/${company._id}`}
     className="company-card"

@@ -1,4 +1,4 @@
-```css
+
 .company-details-page {
   max-width: 1000px;
   margin: 40px auto;
@@ -19,6 +19,55 @@
   border: 1px solid #e5e7eb;
   border-radius: 16px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.company-details-back,
+.company-details-industry,
+.company-details-item span,
+.company-details-description h2,
+.company-details-jobs-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.company-details-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.company-details-item span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.company-details-item .link {
+  margin-left: 8px;
+  text-decoration: none;
+  color: #2563eb;
+}
+
+
+
+.company-details-item span svg,
+.company-details-industry svg,
+.company-details-description h2 svg {
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.company-details-back svg {
+  font-size: 14px;
+}
+
+.company-details-jobs-btn {
+  justify-content: center;
 }
 
 .company-details-header {
@@ -136,4 +185,3 @@
     grid-template-columns: 1fr;
   }
 }
-```
