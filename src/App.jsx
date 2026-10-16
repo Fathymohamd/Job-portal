@@ -1,13 +1,11 @@
-import Navbar from "./components/Navbar"
-import JobCard from "./components/JobCard"
+
 import Categories from "./components/Categories/Categories"
 import LatestJobs from "./components/LatestJobs"
 import Companies from "./components/Companies"
-import Footer from "./components/Footer"
 import Register from "./Auth/Register";
 import Login from "./Auth/Login";
 import ForgotPassword from "./Auth/ForgotPassword";
-import Jobs from "./components/Findjobs";
+import Jobs from "./components/FindJobs";
 import About from "./components/About";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Privacy from "./components/Privacy";
@@ -62,13 +60,13 @@ function App() {
   path="*"
   element={<NotFound />}
 />
-  <Route element={<MainLayout />}>
-  <Route path="/" element={<><Home /><Companies/><Categories/><LatestJobs /><WhyChooseUs/></>} />
-  <Route path="/jobs" element={<Jobs />} />
-  <Route path="/companies" element={<Companies />} />
-  <Route path="/about" element={<About />} />
-  <Route path="/login" element={<Login />}/>
-  <Route path="/forgotPassword" element={<ForgotPassword />}/>
+<Route element={<MainLayout />}>
+<Route path="/" element={<><Home /><Companies/><Categories/><LatestJobs /><WhyChooseUs/></>} />
+<Route path="/jobs" element={<Jobs />} />
+<Route path="/companies" element={<Companies />} />
+<Route path="/about" element={<About />} />
+<Route path="/login" element={<Login />}/>
+<Route path="/forgotPassword" element={<ForgotPassword />}/>
 <Route path="/register" element={<Register />} />
 <Route path="/terms" element={<Terms />} />
 <Route path="/contact" element={<Contact />} />
