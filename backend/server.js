@@ -38,7 +38,7 @@ connectDB()
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://job-portal-z8pz.vercel.app",
+  "https://job-portal-lklg.vercel.app",
 ];
 
 app.use(
